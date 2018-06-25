@@ -14,6 +14,11 @@ class User extends Authenticatable
         return $this->hasMany(Topic::class);
     }
 
+    public function replies()
+    {
+        return $this->hasMany(Reply::class);
+    }
+
     /**
      * The attributes that are mass assignable.
      *
